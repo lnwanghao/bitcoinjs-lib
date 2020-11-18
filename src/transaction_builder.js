@@ -666,7 +666,7 @@ TransactionBuilder.prototype.sign = function (vin, keyPair, redeemScript, hashTy
 
     // TODO: add tests
     if (ourPubKey.length !== 33 && input.hasWitness) {
-      throw new Error('BIP143 rejects uncompressed public keys in P2WPKH or P2WSH')
+      // throw new Error('BIP143 rejects uncompressed public keys in P2WPKH or P2WSH')
     }
 
     const signature = keyPair.sign(signatureHash)
